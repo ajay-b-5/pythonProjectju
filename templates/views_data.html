@@ -1,0 +1,28 @@
+{% extends 'dash.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">SL NO</th>
+      <th scope="col">FOOD</th>
+      <th scope="col">CATEGORY</th>
+      <th scope="col">PRIZE</th>
+      <th scope="col">UPDATE</th>
+       <th scope="col">DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for food_name in data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}1</th>
+      <td>{{food_name.name}}</td>
+      <td>{{food_name.cost}}</td>
+      <td>{{food_name.category}}</td>
+
+    </tr>
+
+
+
+  </tbody>
+</table>
